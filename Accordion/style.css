@@ -1,0 +1,53 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.accordion-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282828;
+    font-family: "Syne Mono";
+}
+
+.heading{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    letter-spacing: 5px;
+}
+
+.accordion{
+    max-width: 500px;
+    /* find the meaninig */
+    width: calc(100%-20px); 
+}
+
+details{
+    background-color: #1E1E1E;
+    margin-bottom: 10px;
+    /* find the below meaning */
+    filter: drop-shadow(5px 5px 0px #0A0A0A);
+}
+
+details:hover{
+    filter: drop-shadow(5px 5px 4px #0A0A0A);
+}
+
+details > summary{
+    color: #f4de64;
+    padding: 5px 10px;
+    font-size: 1.3em;
+    cursor: pointer;
+}
+
+details > p{
+    padding: 5px 10px 10px 20px;
+    color: #ddd;
+}

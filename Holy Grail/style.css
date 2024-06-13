@@ -1,0 +1,73 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne:wght@400..800&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Syne Mono",sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 16rem 1fr 16rem;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+    "header header header"
+    "navbar content sidebar"
+    "footer footer footer"
+    ;
+    height: 100vh;
+}
+
+header{
+    grid-area: header;
+    background-color: #2C5364;
+    padding: 2rem;
+    font-size: 40px;
+    text-align: center;
+}
+
+nav{
+    grid-area: navbar;
+    padding: 2rem;
+    background-color: #0F2027;
+    font-size: 30px;
+}
+
+main{
+    grid-area: content;
+    padding: 2rem;
+    background-color: #203A43;
+    font-size: 30px;
+}
+
+aside{
+    grid-area: sidebar;
+    padding: 2rem;
+    background-color: #0F2027;
+    font-size: 30px;
+}
+
+footer{
+    grid-area: footer;
+    padding: 2rem;
+    background-color: #2C5364;
+    font-size: 40px;
+}
+
+@media(max-width:800px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto minmax(5px, auto) 1fr minmax(5px,auto) auto;
+        grid-template-areas: 
+        "header"
+        "navbar"
+        "content"
+        "sidebar"
+        "footer";
+    }
+}

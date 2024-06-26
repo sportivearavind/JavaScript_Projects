@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event){
       .then((res) => res.json())
       .then((res) => {
         data = res;
-        console.log(res);
+        // console.log(res);
 
         for(let i=0;i<data.length;i++){
             

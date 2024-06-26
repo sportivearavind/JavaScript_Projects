@@ -47,3 +47,7 @@
 .black{
     background-color: black;
 }
+
+.highlight {
+  background-color: rgb(0, 106, 255);
+}

@@ -1,0 +1,102 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif ;
+}
+ 
+/* body{
+    background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
+    height: 100vh;
+} */
+ 
+header{
+    display: flex;
+    height: 100px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    /* background-color: #383291; */
+    padding: 0 5rem;
+    z-index: 100;
+}
+ 
+header h1{
+    font-size: 40px;
+    color: white;
+}
+ 
+header nav{
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+header nav a{
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: .6rem 1.4rem;
+    border-radius: 90px;
+    color: white;
+    transition: 0.3s;
+}
+ 
+header nav a.active{
+    background-color: #524789;
+}
+ 
+header nav a:hover{
+    background-color: #524789;
+}
+ 
+header nav:hover > a:not(:hover){
+    background: none;
+}
+ 
+.home{
+    display: flex;
+    height: 100dvh;
+    background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
+    position: relative;
+    overflow: hidden;
+}
+ 
+.home img{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+}
+ 
+.home .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* to perfectly center to the middle */
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: 600;
+}
+ 
+.about{
+    padding: 5rem 10rem;
+    background-color: #383291;
+    color: white;
+    z-index: 10;
+    position: relative;
+    /* margin-top: -1rem; */
+}
+ 
+.about h2{
+    font-size: 2rem;
+}
+ 
+.about p{
+    line-height: 1.7rem;
+    margin-top: 2rem;
+}

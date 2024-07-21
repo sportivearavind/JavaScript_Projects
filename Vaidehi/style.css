@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
+ 
+/* global styling */
+ 
+:root{
+    --text-dark:#171717;
+    --text-light: #525252;
+    --blue-bg:#4564ed;
+}
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    transition: 0.3s;
+}
+ 
+li{
+    list-style: none;
+}
+ 
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+html,body{
+    scroll-behavior: smooth;
+}
+ 
+body,html{
+    scroll-behavior: smooth;
+    font-family: "Inter", sans-serif;
+}
+
+.section-header{
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: "Caveat", cursive;
+}
+ 
+/* ----------header-styling------------- */
+ 
+.header-container{
+    min-height: 100vh;
+    /* background: #f4c4f3; */
+    background-image: radial-gradient(rgba(255,255,255,0), rgba(0,0,0,0.9)) , url("images/heor-bg.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+
+}
+ 
+nav{
+    /* max-width: 1400px; */
+    /* background-color: aqua; */
+    margin: auto;
+    top: 0;
+    width: 85%;
+}
+ 
+/* initially nav-header is hidden for large screen size */
+.nav-header{
+    display: none;  
+}
+ 
+.nav-links .nav-logo img{
+    max-width: 250px;
+}
+ 
+.nav-links{
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+ 
+.menu-links{
+    max-width: 800px;
+    /* background-color: bisque; */
+    max-width: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+.menu-links li a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+ 
+.menu-links li a:hover{
+    padding-bottom: 3px;
+    border-bottom: 2px solid white;
+    transition: 0.3s;
+}
+
+/* navbar styling ends */
+
+/* hero styling starts */
+
+
+
+/* hero styling ends */
+
+/* Gallery styling starts */
+
+#gallery{
+    margin: 3rem 0;
+    width: 80%;
+    margin: 3rem auto;
+}
+
+.gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    margin-block: 2rem;  /* sets top and bottom margin to 2rem */
+    gap: 1rem;
+    transition: 0.3s;
+}
+
+.gallery-grid img{
+    cursor: pointer;
+}
+
+.gallery-grid:hover img:not(:hover){
+    opacity: 0.5;
+}
+
+
+/* gallery styling ends */
+
+
+/* -----------media queries----------- */
+ 
+@media (max-width: 768px){
+ 
+    nav{
+        width: 100%;
+    }
+ 
+    .nav-header{
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--text-dark);
+        padding: 1rem;
+    }
+ 
+    .nav-header .nav-logo img{
+        max-width: 100px;
+    }
+ 
+    .nav-menu-btn{
+        color: white;
+    }
+ 
+    .nav-links{
+        /* background-color: var(--text-dark); */
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        gap: 1.5rem;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+ 
+    .header-container{
+        min-height: 500px;
+    }
+ 
+    .menu-links{
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        gap: 1.5rem;
+        transform: translateY(-400%);
+        transform: 0.3s;
+    }
+ 
+    .nav-links.open{
+        background-color: var(--text-dark);
+    }
+ 
+    .nav-links.open .menu-links{
+        transform: translateY(0);
+    }
+ 
+    .nav-links .nav-logo{
+        display: none;
+    }
+}

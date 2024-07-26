@@ -304,6 +304,8 @@ nav{
 /* gallery styling ends */
  
 /* testimonial styling starts */
+
+
  
 .testimonials .section-header{
     background: #EDF2F8;
@@ -485,6 +487,141 @@ nav{
 }
  
 /* testimonial styling ends */
+
+/* contact styling starts */
+
+.contact{
+    /* background-color: #f3eef3; */
+    background: url("images/contact-bg-1.jpg");
+    padding-top: 2rem;
+    
+}
+
+.contact-container{
+    width: 90%;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+}
+
+.contact-form{
+    width: 60%;
+    /* background-color: #1769ff; */
+}
+
+.contact-form{
+    padding: 2rem;
+}
+
+.contact-form h4{
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-family: "Inter";
+    font-weight: 500;
+}
+
+input{
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-bottom: 2rem;
+    width: 60%;
+    height: 3rem;
+}
+
+input:focus{
+    border: 1px solid #74c0fc;
+}
+
+#msg{
+    height: 8rem;
+}
+
+form button{
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    border-radius: .3rem;
+    border: none;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: #ea4c89;
+    color: white;
+    font-weight: 600;
+}
+
+form button i{
+    margin-left: .5rem;
+}
+
+.contact-socials{
+    display: flex;
+    flex-direction: column;
+    /* background-color: #1769ff; */
+    width: 20%;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contact-socials p{
+    font-size: 1.3rem;
+    padding-top: .3rem;
+}
+
+.contact-socials i{
+    font-size: 4rem;
+}
+
+/* contact styling ends */
+
+/* footer styling starts */
+
+footer{
+    height: 180px;
+    padding: 1rem;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    width: 10rem;
+}
+
+
+
+.socials i{
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: .5rem;
+}
+
+.copywright{
+    color: white;
+    text-align: center;
+    font-size: .8rem;
+    margin-top: 1rem;
+}
+
+/* footer styling ends */
  
  
 /* -----------media queries----------- */

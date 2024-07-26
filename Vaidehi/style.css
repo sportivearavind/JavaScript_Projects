@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
-
+ 
  
 /* global styling */
  
@@ -32,7 +32,7 @@ img{
     width: 100%;
     height: 100%;
 }
-
+ 
 html,body{
     scroll-behavior: smooth;
 }
@@ -41,7 +41,7 @@ body,html{
     scroll-behavior: smooth;
     font-family: "Inter", sans-serif;
 }
-
+ 
 .section-header{
     text-align: center;
     font-size: 2.5rem;
@@ -57,7 +57,7 @@ body,html{
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
-
+ 
 }
  
 nav{
@@ -108,44 +108,392 @@ nav{
     border-bottom: 2px solid white;
     transition: 0.3s;
 }
-
+ 
 /* navbar styling ends */
-
+ 
 /* hero styling starts */
-
-
-
+ 
+ 
+ 
 /* hero styling ends */
-
+ 
+/* infinite text styling starts */
+ 
+.infinite-text{
+    display: flex;
+    justify-content: flex-start;
+    background-color: #003049;
+    overflow: hidden;
+    height: 40px;
+    align-items: center;
+}
+ 
+.infinite-text h2{
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    white-space: nowrap;
+    padding: 0 6rem;
+    letter-spacing: 1px;
+    animation: move 7s linear infinite;
+    transition: 1s ease;
+}
+ 
+@keyframes move{
+    0%{
+        transform: translateX(0);
+    }
+ 
+    100%{
+        transform: translateX(-100%);
+    }
+}
+ 
+/* infinite test styling ends */
+ 
+ 
+ 
+/* services styling starts */
+ 
+.services-container{
+    background-color: #fceef3;
+    padding: 2rem 0;
+}
+ 
+.services-card-container{
+    width: 80%;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 1.5rem;
+}
+ 
+.services-card{
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: white;
+}
+ 
+.services-card:nth-child(2){
+    background-color: #1769ff;
+    color: white;
+}
+ 
+ 
+.services-img-1{
+    background: url("images/gel-shellac.jpg");
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    transition: 0.3s ease;
+}
+ 
+/* .services-img-1:hover{
+    scale: 1.1;
+} */
+ 
+.services-img-2{
+    background: url("images/gel-overlay.jpg");
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+.services-img-3{
+    background: url("images/gel-extension.jpg");
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+ 
+.services-card h3{
+    text-align: center;
+    margin-top: .8rem;
+}
+ 
+.services-card p{
+    width: 85%;
+    margin: auto;
+    margin-top: .8rem;
+    font-size: .8rem;
+    text-align: center;
+    /* background-color: antiquewhite; */
+}
+ 
+.services-card h2{
+    text-align: center;
+    margin-top: .1rem;
+    font-size: 2.5rem;
+}
+ 
+.services-card ul{
+    text-align: center;
+    margin: .5rem;
+}
+ 
+.services-card ul li{
+    padding: .2rem 0;
+}
+ 
+.services-card button{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: .5rem 0;
+    margin-top: 1rem;
+    background-color: #ffecf0;
+    transition: 0.3s ease;
+    cursor: pointer;
+    font-size: 1.3rem;
+    border-radius: .5rem;
+}
+ 
+.services-card button:hover{
+    background-color: #ea4c89;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: white;
+    border: none;
+}
+ 
+.services-card:nth-child(2) button{
+    background-color: white;
+    color: #ea4c89;
+    border: 2px solid white;
+}
+ 
+.services-card:nth-child(2) button:hover{
+    background-color: #ea4c89;
+    color: white;
+    border: 2px solid white;
+}
+ 
+ 
+ 
+/* services styling starts */
+ 
 /* Gallery styling starts */
-
+ 
 #gallery{
     margin: 3rem 0;
     width: 80%;
     margin: 3rem auto;
 }
-
+ 
 .gallery-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     margin-block: 2rem;  /* sets top and bottom margin to 2rem */
     gap: 1rem;
     transition: 0.3s;
 }
-
+ 
 .gallery-grid img{
     cursor: pointer;
 }
-
+ 
 .gallery-grid:hover img:not(:hover){
     opacity: 0.5;
 }
-
-
+ 
+ 
 /* gallery styling ends */
-
-
+ 
+/* testimonial styling starts */
+ 
+.testimonials .section-header{
+    background: #EDF2F8;
+    padding-top: 2rem;
+}
+ 
+.outerdiv
+{
+    width: 100%;
+    min-height: 80vh;
+    background: #EDF2F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.innerdiv
+{
+    transform: scale(0.9);
+    /* margin: 1rem; */
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-rows: repeat(2,22rem);
+    grid-template-columns: repeat(4,17rem);
+}
+.eachdiv
+{
+    padding: 1rem 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 5px 5px 20px #6d6b6b6b;
+    color: white;
+}
+.div1
+{
+    background: #733FC8;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-image: url(https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position-x: 25rem;
+}
+.div2
+{
+    background:#49556B;
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+.div3
+{
+    background: white;
+    grid-column: 4/5;
+    grid-row: 1/3;
+    color: black;
+}
+.div4
+{
+    background: white;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    color: black;
+}
+.div5
+{
+    background: #18202D;
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+.userdetails
+{
+    display: flex;
+}
+.imgbox
+{
+    margin-right: 1rem;
+}
+.imgbox img
+{
+    border-radius: 50%;
+    width: 2rem;
+    border: 2px solid #cec5c5;
+}
+.detbox
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.detbox p
+{
+    margin: 0;
+}
+.detbox .name
+{
+    color: hsl(0, 0%, 81%);
+    font-size: 0.9rem;
+    margin-bottom: 0.1rem;
+    font-weight: 600;
+}
+.detbox .name.dark
+{
+    color: #49505A;
+}
+.detbox .designation
+{
+    color: hsl(0, 0%, 81%);
+    opacity: 50%;
+    font-size: 0.8rem;
+}
+.detbox .designation.dark
+{
+    color: #49505A;
+}
+.review h4
+{
+    font-size: 1.4rem;
+    color: #F3DEFF;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+}
+.review.dark h4{
+    color:#4B5258;
+}
+.review p
+{
+    font-size: 0.95rem;
+    color: #F3DEFF;
+    font-weight: 500;
+    opacity: 50%;
+    line-height: 1.5;
+}
+.review.dark p{
+    color: #0e0e0e;
+}
+.attribution
+{
+    font-size: 1rem;
+    line-height: 1.5;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    text-align: right;
+}
+.attribution a
+{
+    text-decoration: none;
+}
+ 
+@media only screen and (max-width: 1000px)
+{
+    .innerdiv
+    {
+        transform: scale(0.7);
+    }
+}
+@media only screen and (max-width: 800px)
+{
+    .innerdiv
+    {
+        transform: scale(0.6);
+    }
+}
+@media only screen and (max-width: 600px)
+{
+    .div1 {
+        background-position-x: 10rem;
+    }
+    .innerdiv
+    {
+        display: flex;
+        flex-direction: column;
+        transform: scale(1);
+        margin: 2rem;
+        margin-bottom: 5rem;
+    }
+    .attribution
+    {
+        position: relative;
+    }
+}
+ 
+/* testimonial styling ends */
+ 
+ 
 /* -----------media queries----------- */
+ 
+@media (max-width : 1560px){
+    .gallery-grid{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
  
 @media (max-width: 768px){
  

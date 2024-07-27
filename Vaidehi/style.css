@@ -53,7 +53,7 @@ body,html{
 .header-container{
     min-height: 100vh;
     /* background: #f4c4f3; */
-    background-image: radial-gradient(rgba(255,255,255,0), rgba(0,0,0,0.9)) , url("images/heor-bg.jpg");
+    background-image: radial-gradient(rgba(255,255,255,0), rgba(0,0,0,0.9)) , url("images/bg-6.jpg");
     background-repeat: no-repeat;
     background-position:center;
     background-size: cover;
@@ -272,9 +272,49 @@ nav{
     border: 2px solid white;
 }
  
- 
- 
 /* services styling starts */
+
+/* counter styling starts */
+
+.counter{
+    background: url("images/counter-bg-2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 300px;
+    color: white;
+}
+
+.counter-wrapper{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+
+.counter-number{
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.counter span{
+    font-size: 7rem;
+}
+
+.counter p{
+    font-size: 1.1rem;
+}
+
+/* counter styling ends */
  
 /* Gallery styling starts */
  
@@ -578,6 +618,10 @@ form button i{
 
 .contact-socials i{
     font-size: 4rem;
+}
+
+.social-icon p{
+    color: white;
 }
 
 /* contact styling ends */

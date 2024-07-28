@@ -118,36 +118,38 @@ nav{
 /* hero styling ends */
  
 /* infinite text styling starts */
- 
-.infinite-text{
+
+/* .infinite-text{
     display: flex;
-    justify-content: flex-start;
-    background-color: #003049;
-    overflow: hidden;
-    height: 40px;
-    align-items: center;
-}
- 
-.infinite-text h2{
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: white;
     white-space: nowrap;
-    padding: 0 6rem;
-    letter-spacing: 1px;
-    animation: move 7s linear infinite;
-    transition: 1s ease;
+    overflow: hidden;
 }
  
+.text-slide{
+    display: inline-block;
+    padding: 1rem 0;
+    gap: 5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: move 5s linear infinite;
+    white-space: nowrap;
+}
+
+.text-slide span{
+    margin: 0 2rem;
+}
+
 @keyframes move{
-    0%{
-        transform: translateX(0);
+    from{
+        transform:translateX(0);
     }
- 
-    100%{
+
+    to{
         transform: translateX(-100%);
     }
-}
+} */
+
+
  
 /* infinite test styling ends */
  
@@ -704,6 +706,7 @@ footer{
  
     .nav-menu-btn{
         color: white;
+        cursor: pointer;
     }
  
     .nav-links{
@@ -722,14 +725,9 @@ footer{
     .header-container{
         min-height: 500px;
     }
- 
+
     .menu-links{
-        display: flex;
-        flex-direction: column;
-        z-index: 10;
-        gap: 1.5rem;
-        transform: translateY(-400%);
-        transform: 0.3s;
+        display: none;
     }
  
     .nav-links.open{
@@ -738,9 +736,52 @@ footer{
  
     .nav-links.open .menu-links{
         transform: translateY(0);
+        display: flex;
+        flex-direction: column;
+        z-index: 10;
+        gap: 1.5rem;
+        transform: translateY(-400%);
+        transform: 0.3s;
     }
  
     .nav-links .nav-logo{
         display: none;
+    }
+
+    .counter{
+        display: none;
+    }
+}
+
+@media (max-width: 390px){
+    .counter{
+        display: none;
+    }
+
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-form{
+        width: 100%;
+    }
+
+    form input{
+        width: 100%;
+    }
+
+    .contact-socials{
+        display: none;
+    }
+
+    .footer-logo{
+        display: none;
+    }
+
+    .socials{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
     }
 }

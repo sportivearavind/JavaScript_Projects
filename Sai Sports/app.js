@@ -15,3 +15,16 @@ navLinks.addEventListener("click", () => {
   navLinks.classList.remove("open");
   menuBtnIcon.setAttribute("class", "fa-solid fa-bars");
 });
+
+// tags section
+/*
+ 
+const tagLinks = document.getElementById('.tag-links');
+ 
+tagLinks.forEach(element => {
+  if(element.classList.contains('active')){
+    element.classList.remove('active');
+  }
+});
+ 
+*/

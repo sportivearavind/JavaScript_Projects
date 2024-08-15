@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
  
 /* global styling */
  
 :root{
     --text-dark:#171717;
     --text-light: #525252;
+    --blue-bg:#4564ed;
 }
  
 *{
@@ -33,6 +35,12 @@ img{
 body,html{
     scroll-behavior: smooth;
     font-family: "Inter", sans-serif;
+}
+
+.section-header{
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: "Caveat", cursive;
 }
  
 /* ----------header-styling------------- */
@@ -95,10 +103,177 @@ nav{
     transition: 0.3s;
 }
  
+/* tags styling starts */
+ 
+.tag-container{
+    /* background-color: aquamarine; */
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+ 
+.tag-links{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+ 
+.tag-links .active{
+    background-color: #4564ed;
+    color: white;
+}
+ 
+.tag-links a{
+    font-size: 1.3rem;
+    /* background-color: #525252; */
+    padding: .5rem 1.2rem;
+    border-radius: 99px;
+    transition: ease-in-out .3s;
+    border: 1px solid black;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+ 
+.tag-links a:hover{
+    background-color: #4564ed;
+    color: white;
+}
+ 
+.tag-links:hover > a:not(:hover){
+    background: none;
+    color: black;
+}
+ 
+/* tags styling ends */
+ 
+/* card style starts */
+ 
+.product-card-container{
+    /* background-color: aqua; */
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+ 
+.card{
+    /* background: linear-gradient(to right, #076585, #fff); */
+    background: linear-gradient(to right, #8e9eab, #eef2f3);
+    border-radius: .5rem;
+    padding: .3rem;
+}
+ 
+/* card style ends */
+
+/* Testimonial styling starts */
+
+.testimonial-container{
+    margin: 3rem 0;
+}
+
+.test-card-container{
+    /* background-color: aquamarine; */
+    padding: 1rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.test-card{
+    /* background-color: rgb(253, 253, 232); */
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.test-img img{
+    width: 80px;
+    border-radius: 80px;
+}
+
+.test-card i{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.test-card p{
+    margin-bottom: 1rem;
+    line-height: 1.5rem;
+}
+
+.info .test-name{
+    font-weight: bold;
+    margin-bottom: .2rem;
+}
+
+.info .test-desig{
+    color: #74C0FC;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+.stars i{
+    font-size: 1rem;
+}
+/* Testimonial styling ends */
+
+/* footer styling starts*/
+
+.footer-container{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0 0 0;
+    gap: 1.5rem;
+}
+
+.socials{
+    background-color: #cfdef3;
+}
+
+.socials i{
+    background-color: white;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border-radius: 100%;
+}
+
+.useful-links{
+    display: flex;
+    gap: 2rem;
+}
+
+.useful-links li a{
+    color: white;
+}
+
+.copywright{
+    color: white;
+    background-color: rgb(21, 21, 21);
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+}
+
+/* footer styling ends */
+ 
 /* -----------media queries----------- */
  
 @media (max-width: 768px){
-
+ 
     nav{
         width: 100%;
     }
@@ -130,7 +305,7 @@ nav{
         align-items: center;
         width: 100%;
     }
-
+ 
     .header-container{
         min-height: 500px;
     }
@@ -143,11 +318,11 @@ nav{
         transform: translateY(-400%);
         transform: 0.3s;
     }
-
+ 
     .nav-links.open{
         background-color: var(--text-dark);
     }
-
+ 
     .nav-links.open .menu-links{
         transform: translateY(0);
     }
